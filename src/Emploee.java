@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Emploee {
 
@@ -7,7 +8,8 @@ public class Emploee {
     private final LocalDate _hireDay;
 
     public Emploee(String name, double salary, int year, int month, int day) {
-        _name = name;
+
+        _name = Objects.requireNonNullElse(name, "unknown");
         _salary = salary;
         _hireDay = LocalDate.of(year,month,day);
     }
