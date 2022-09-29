@@ -22,6 +22,11 @@ public class Manager extends Emploee {
         return _bonus;
     }
 
+    @Override
+    public String getDescription() {
+        return  new String("Name: " + super.get_name() + " Salary: " + getSalary() + " Hire Day: " + getHireDay() + " Bonus: " + _bonus);
+    }
+
 
     @Override
     public double getSalary() {

@@ -11,20 +11,14 @@ public class Main {
         workers[2] = new Emploee("Gordon Freeman", 3, 1998, 11,19);
 
 
-
-
         manager.set_bonus(30);
         manager.addBonus(10);
-
-
-
-        //System.out.println("Name: " + manager.get_name() + ", Salary: " + manager.getSalary() + ", Hair Day:" + manager.getHireDay() + ", Current Bonus:" + manager.get_bonus());
 
 
         for (Emploee people :workers)
         {
             people.raiseSalary(10);
-            System.out.println("Name: " + people.get_name() + ", Salary: " + people.getSalary() + ", Hair Day:" + people.getHireDay());
+            System.out.println(people.getDescription());
         }
 
     }
