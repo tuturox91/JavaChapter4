@@ -22,6 +22,8 @@ public class Main {
             System.out.println("Not right");
         }
 
+        System.out.println(people[1].hashCode());
+        System.out.println(people[4].hashCode());
 
 
         manager.set_bonus(30);
