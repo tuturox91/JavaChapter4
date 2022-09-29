@@ -13,13 +13,16 @@ public class Student extends People{
         super(name);
         _collegeName = collegeName;
     }
-
+/*
     @Override
     public boolean equals(Object other) {
-        if(other instanceof Student) {
+
+
+        /*if(other instanceof Student) {
             return ((Student) other).get_name() == this.get_name() && ((Student) other)._collegeName == this._collegeName ? true : false;
         } else {
             return false;
         }
     }
+ */
 }
