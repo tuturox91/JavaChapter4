@@ -1,11 +1,13 @@
+package staff;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class Emploee {
 
-    private final String _name;
+    private  String _name;
     private double _salary;
-    private final LocalDate _hireDay;
+    private  LocalDate _hireDay;
 
     public Emploee(String name, double salary, int year, int month, int day) {
 
