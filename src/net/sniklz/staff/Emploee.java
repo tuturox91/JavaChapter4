@@ -3,7 +3,7 @@ package net.sniklz.staff;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Emploee extends People implements Comparable {
+public class Emploee extends People implements Comparable<Emploee> {
     private double _salary;
     private  LocalDate _hireDay;
 
@@ -52,12 +52,8 @@ public class Emploee extends People implements Comparable {
 
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Emploee o) {
         Emploee temp;
-        if(o.getClass() == Emploee.class) {
-            temp = (Emploee) o;
-            return Double.compare(this._salary, temp._salary);
-        }
-        return 0;
+        return Double.compare(this._salary, o._salary);
     }
 }
