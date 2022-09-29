@@ -1,4 +1,4 @@
-package staff;
+package net.sniklz.staff;
 
 public class Manager extends Emploee {
 

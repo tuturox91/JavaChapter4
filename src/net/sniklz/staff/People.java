@@ -1,4 +1,4 @@
-package staff;
+package net.sniklz.staff;
 
 public abstract class People {
     private  String _name;

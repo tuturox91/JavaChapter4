@@ -1,7 +1,6 @@
-package staff;
+package net.sniklz.staff;
 
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Emploee extends People {
     private double _salary;
