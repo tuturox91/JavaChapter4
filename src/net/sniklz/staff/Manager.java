@@ -33,4 +33,14 @@ public class Manager extends Emploee {
         return super.getSalary() + _bonus;
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if(super.equals(object)) {
+            if(object instanceof Manager)
+                return _bonus == ((Manager) object).get_bonus();
+        }
+        return  false;
+    }
+
+
 }

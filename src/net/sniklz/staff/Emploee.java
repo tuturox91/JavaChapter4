@@ -1,6 +1,7 @@
 package net.sniklz.staff;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Emploee extends People {
     private double _salary;
@@ -30,5 +31,21 @@ public class Emploee extends People {
         double rise = _salary * byPercent /100;
         _salary+=rise;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Emploee) {
+            Emploee otherObject = (Emploee) other;
+            return other != null
+                    && getClass() == other.getClass()
+                    && Objects.equals(get_name(), otherObject.get_name())
+                    && _salary == otherObject._salary
+                    && Objects.equals(_hireDay, otherObject._hireDay);
+        }
+        return false;
+    }
+
+
+
 
 }
