@@ -2,23 +2,27 @@ import staff.*;
 
 public class Main {
     public static void main(String[] args) {
-        Emploee[] workers = new Emploee[3];
+        People[] people = new People[4];
 
         Manager manager = new Manager("Starnger",6600, 2022,9,10, 5);
 
-        workers[0] = manager;
-        workers[1] = new Emploee(null, 7400, 2022, 3,3);
-        workers[2] = new Emploee("Gordon Freeman", 3, 1998, 11,19);
+        people[0] = manager;
+        people[1] = new Emploee(null, 7400, 2022, 3,3);
+        people[2] = new Emploee("Gordon Freeman", 3, 1998, 11,19);
+        people[3] = new Student("Jonny Bungalo");
 
 
         manager.set_bonus(30);
         manager.addBonus(10);
 
 
-        for (Emploee people :workers)
+        for (People human : people)
         {
-            people.raiseSalary(10);
-            System.out.println(people.getDescription());
+            if(human instanceof Emploee) {
+                Emploee staff = (Emploee)human;
+                staff.raiseSalary(10);
+            }
+            System.out.println(human.getDescription());
         }
 
     }
