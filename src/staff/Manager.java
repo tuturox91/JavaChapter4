@@ -10,18 +10,22 @@ public class Manager extends Emploee {
     }
 
     public void set_bonus(double bonus) {
-        _salary += bonus;
         this._bonus = bonus;
     }
 
     public void addBonus(double bonus) {
-        _salary -= _bonus;
         this._bonus += bonus;
-        _salary += _bonus;
+
     }
 
     public double get_bonus() {
         return _bonus;
+    }
+
+
+    @Override
+    public double getSalary() {
+        return super.getSalary() + _bonus;
     }
 
 }
