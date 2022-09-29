@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public class Emploee {
 
-    protected   String _name;
-    protected double _salary;
-    protected  LocalDate _hireDay;
+    private    String _name;
+    private double _salary;
+    private  LocalDate _hireDay;
 
     public Emploee(String name, double salary, int year, int month, int day) {
 
