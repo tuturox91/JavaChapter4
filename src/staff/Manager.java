@@ -9,18 +9,19 @@ public class Manager extends Emploee {
         this._bonus = bonus;
     }
 
-    public void set_bonus(double _bonus) {
-        this._bonus = _bonus;
+    public void set_bonus(double bonus) {
+        _salary += bonus;
+        this._bonus = bonus;
     }
 
     public void addBonus(double bonus) {
+        _salary -= _bonus;
         this._bonus += bonus;
+        _salary += _bonus;
     }
 
     public double get_bonus() {
         return _bonus;
     }
-
-
 
 }
