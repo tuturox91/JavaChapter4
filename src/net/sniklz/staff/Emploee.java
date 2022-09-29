@@ -3,13 +3,13 @@ package net.sniklz.staff;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Emploee extends People {
+public class Emploee extends People implements Comparable {
     private double _salary;
     private  LocalDate _hireDay;
 
 
     public String getDescription() {
-        return  new String("Name: " + super.get_name() + "Salary: " + _salary + "Hire Day: " + _hireDay);
+        return  new String("Name: " + super.get_name() +  " Salary: " + _salary + " Hire Day: " + _hireDay);
     }
 
 
@@ -51,6 +51,23 @@ public class Emploee extends People {
     }
 
 
-
-
+    @Override
+    public int compareTo(Object o) {
+        Emploee temp;
+        if(o.getClass() == Emploee.class) {
+            temp = (Emploee) o;
+            switch (Double.compare(this._salary, temp._salary)) {
+                case -1: {
+                    return -1;
+                }
+                case 0: {
+                    return 0;
+                }
+                case 1: {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+    }
 }
