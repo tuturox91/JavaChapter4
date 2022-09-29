@@ -56,17 +56,7 @@ public class Emploee extends People implements Comparable {
         Emploee temp;
         if(o.getClass() == Emploee.class) {
             temp = (Emploee) o;
-            switch (Double.compare(this._salary, temp._salary)) {
-                case -1: {
-                    return -1;
-                }
-                case 0: {
-                    return 0;
-                }
-                case 1: {
-                    return 1;
-                }
-            }
+            return Double.compare(this._salary, temp._salary);
         }
         return 0;
     }
