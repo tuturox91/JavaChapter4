@@ -11,6 +11,9 @@ public class Main {
 
         Manager manager = new Manager("Starnger",6600, 2022,9,10, 5);
 
+        manager.raiseSalary(10);
+
+
         System.out.println("Name: " + manager.get_name() + ", Salary: " + manager.getSalary() + ", Hair Day:" + manager.getHireDay() + ", Current Bonus:" + manager.get_bonus());
 
 
