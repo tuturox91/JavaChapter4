@@ -45,6 +45,11 @@ public class Emploee extends People {
         return false;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(get_name(), _salary, _hireDay);
+    }
+
 
 
 

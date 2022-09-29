@@ -23,6 +23,7 @@ public class Main {
         }
 
 
+
         manager.set_bonus(30);
         manager.addBonus(10);
 
