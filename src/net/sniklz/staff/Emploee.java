@@ -3,7 +3,7 @@ package net.sniklz.staff;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Emploee extends People implements Comparable<Emploee> {
+public class Emploee extends People implements Comparable<Emploee>, MyTestedInterface {
     private double _salary;
     private  LocalDate _hireDay;
 
@@ -17,6 +17,7 @@ public class Emploee extends People implements Comparable<Emploee> {
         super(name);
         _salary = salary;
         _hireDay = LocalDate.of(year,month,day);
+
     }
 
     public double getSalary() {
@@ -33,17 +34,16 @@ public class Emploee extends People implements Comparable<Emploee> {
     }
 
     @Override
-    public boolean equals(Object other) {
-        if (other instanceof Emploee) {
-            Emploee otherObject = (Emploee) other;
-            return other != null
-                    && getClass() == other.getClass()
-                    && Objects.equals(get_name(), otherObject.get_name())
-                    && _salary == otherObject._salary
-                    && Objects.equals(_hireDay, otherObject._hireDay);
-        }
-        return false;
+    public boolean equals(Object otherObject) {
+        if(this == otherObject) return  true;
+        if(otherObject == null) return  false;
+        if(this.getClass() != otherObject.getClass()) return false;
+        Emploee other = (Emploee) otherObject;
+        return this.get_name().equals(other.get_name())
+                && this._hireDay.equals(other._hireDay)
+                && Double.valueOf(this._salary).equals(Double.valueOf(other.getSalary()));
     }
+
 
     @Override
     public int hashCode() {

@@ -10,12 +10,20 @@ public class Main {
         People[] people = new People[5];
 
         Manager manager = new Manager("Starnger",6600, 2022,9,10, 5);
+        Manager manager2 = new Manager("Starnger",6600, 2022,9,10, 5);
+        Emploee emploee = new Emploee("Jonny Cash", 7700, 2022, 3,3);
+        Emploee emploee2 = new Emploee("Jonny Cash", 7700, 2022, 3,3);
+
+        System.out.println(manager.equals(manager2));
+
 
         people[0] = manager;
         people[1] = new Emploee("Jonny Cash", 7700, 2022, 3,3);
         people[2] = new Emploee("Gordon Freeman", 3, 1998, 11,19);
         people[3] = new Student("Jonny Bungalo", "Kiev Aviation College");
         people[4] = new Emploee("Jonny Cash", 7400, 2022, 3,3);
+
+
 
         /* test Compare interface and sort
         for (People human : people)
@@ -33,7 +41,7 @@ public class Main {
 
 
 
-        Student student = new Student("Gregory Atols", "Hogvarts College");
+        /*Student student = new Student("Gregory Atols", "Hogvarts College");
 
         if(people[0].equals(people[1])) {
             System.out.println("Right");
@@ -56,7 +64,7 @@ public class Main {
                 staff.raiseSalary(10);
             }
             System.out.println(human.getDescription());
-        }
+        }*/
 
     }
 }

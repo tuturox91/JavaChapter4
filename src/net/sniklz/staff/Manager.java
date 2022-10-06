@@ -1,5 +1,7 @@
 package net.sniklz.staff;
 
+import java.util.Objects;
+
 public class Manager extends Emploee {
 
     private double _bonus;
@@ -27,20 +29,26 @@ public class Manager extends Emploee {
         return  new String("Name: " + super.get_name() + " Salary: " + getSalary() + " Hire Day: " + getHireDay() + " Bonus: " + _bonus);
     }
 
-
+/*
     @Override
     public double getSalary() {
         return super.getSalary() + _bonus;
+    } */
+    public double getSalaryWithBonus() {
+        return super.getSalary() +_bonus;
     }
 
     @Override
-    public boolean equals(Object object) {
-        if(super.equals(object)) {
-            if(object instanceof Manager)
-                return _bonus == ((Manager) object).get_bonus();
+    public boolean equals(Object otherObject) {
+        if (super.equals(otherObject)) {
+           Manager other =  (Manager) otherObject;
+           return Double.valueOf(this._bonus).equals(Double.valueOf(other.get_bonus()));
         }
-        return  false;
+        return false;
     }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(get_name(), getSalary(), getHireDay(), _bonus);
+    }
 }
