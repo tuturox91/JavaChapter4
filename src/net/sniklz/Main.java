@@ -9,12 +9,15 @@ public class Main {
     public static void main(String[] args) {
         People[] people = new People[5];
 
+        Size size = Size.LARGE;
+
+
         Manager manager = new Manager("Starnger",6600, 2022,9,10, 5);
         Manager manager2 = new Manager("Starnger",6600, 2022,9,10, 5);
         Emploee emploee = new Emploee("Jonny Cash", 7700, 2022, 3,3);
         Emploee emploee2 = new Emploee("Jonny Cash", 7700, 2022, 3,3);
 
-        System.out.println(manager.equals(manager2));
+        System.out.println(size.toString());
 
 
         people[0] = manager;
